@@ -68,7 +68,7 @@ void edit_student(){
         if (arr_id[i] == stud) {
             cout << "Previous Name of Student: " << arr_name[i] << endl;
             cout << "Previous Class of Student: " << arr_class[i] << endl;
-            cout << "Previous Name of Student: " << arr_id[i] << endl;
+            cout << "Previous ID of Student: " << arr_id[i] << endl;
 
             arr_id[i] = '0';
             arr_class[i] = '0';
@@ -78,12 +78,12 @@ void edit_student(){
             cin>>arr_name[i];
             cout << "new Class of Student: ";
             cin>>arr_class[i];
-            cout << "new Name of Student: ";
+            cout << "new ID of Student: ";
             cin>>arr_id[i];
 
             cout << "Edited Name of Student: " << arr_name[i] << endl;
             cout << "Edited Class of Student: " << arr_class[i] << endl;
-            cout << "Edited Name of Student: " << arr_id[i] << endl;
+            cout << "Edited ID of Student: " << arr_id[i] << endl;
             cout<<endl<<endl;
         }
     }
@@ -105,12 +105,6 @@ void remove_student(){
             arr_class[i] = '0';
             arr_name[i] = '0';
 
-            for (i = i+1; i < total; i++) {
-                arr_id[i] = arr_id[i-1];
-                arr_name[i] = arr_name[i-1];
-                arr_class[i] = arr_class[i-1];
-            }
-            total--;
         }
     }
 }
@@ -120,7 +114,7 @@ void remove_student(){
 
 void search_student(){
     string stud;
-    cout << "Enter Student ID you want to remove: ";
+    cout << "Enter Student ID you want to search: ";
     cin >> stud;
 
     for (int i = 0; i < total; i++) {
@@ -128,7 +122,7 @@ void search_student(){
         if (arr_id[i] == stud) {
             cout << "Name of Student: " << arr_name[i] << endl;
             cout << "Class of Student: " << arr_class[i] << endl;
-            cout << "Name of Student: " << arr_id[i] << endl;
+            cout << "ID of Student: " << arr_id[i] << endl;
         }
     }
 }
